@@ -64,7 +64,7 @@ public class MyFrame extends JFrame implements ActionListener, MouseListener,Coo
 
         this.setTitle("CHESS BOARD");                        // sets title of frame
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // exit out of application
-        this.setSize(1000, 500);                             // sets the x ,y dimensions
+        this.setSize(550, 550);                             // sets the x ,y dimensions
         setLayout(null);                                     // Use absolute layout for precise positioning
 
         initializeBoard();
@@ -120,7 +120,7 @@ public class MyFrame extends JFrame implements ActionListener, MouseListener,Coo
 
                 if ((i + j) % 2 == 0)
                 {
-                    label.setBackground(new Color(0x4d0000));
+                    label.setBackground(new Color(0x714141));
                 }
                 else
                 {
@@ -132,28 +132,28 @@ public class MyFrame extends JFrame implements ActionListener, MouseListener,Coo
                 if (i == 1)
                 {
                     // label.setIcon(new ImageIcon("C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_soldier.png"));
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\Chess_pdt60.png";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\Chess_plt60_soldier_white.png";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 0 && j == 0)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_elephant.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_elephant.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 0 && j == 1)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_horse.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_horse.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 0 && j == 2)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_camel.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_camel.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
@@ -162,35 +162,35 @@ public class MyFrame extends JFrame implements ActionListener, MouseListener,Coo
                 {
                     // ImageIcon img=new ImageIcon("C:\\Users\\rishi\\OneDrive\\Pictures\\chess.jpg");
                     // label.setIcon(img);
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\queen_black.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_queen.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 0 && j == 4)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_king.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_king.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 0 && j == 5)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_camel.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_camel.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 0 && j == 6)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_horse.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_horse.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 0 && j == 7)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_elephant.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_elephant.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
@@ -198,7 +198,7 @@ public class MyFrame extends JFrame implements ActionListener, MouseListener,Coo
 
                 else if (i == 6)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\Chess_plt60_soldier_white.png";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\Chess_pdt60.png";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
@@ -206,56 +206,56 @@ public class MyFrame extends JFrame implements ActionListener, MouseListener,Coo
 
                 else if (i == 7 && j == 0)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_elephant.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_elephant.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 7 && j == 1)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_horse.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_horse.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 7 && j == 2)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_camel.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_camel.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 7 && j == 3)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_queen.png";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\queen_black.png";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 7 && j == 4)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_king.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_king.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 7 && j == 5)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_camel.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_camel.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 7 && j == 6)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_horse.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_horse.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
                 }
                 else if (i == 7 && j == 7)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\white_elephant.png\\";
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\black_elephant.png\\";
                     ImageIcon originalIcon = new ImageIcon(imagePath);
                     ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(scaledIcon);
@@ -268,8 +268,7 @@ public class MyFrame extends JFrame implements ActionListener, MouseListener,Coo
     }
 
 
-    protected void displayBoardMyFrame(Game game)
-    {
+    protected void displayBoardMyFrame(Game game) {
         JPanel chessPanel = new JPanel();
         chessPanel.setLayout(new GridLayout(8, 8));
         chessPanel.setBounds(50, 50, 400, 400);
@@ -277,37 +276,55 @@ public class MyFrame extends JFrame implements ActionListener, MouseListener,Coo
         chessPanel.setOpaque(true);
         add(chessPanel);
 
+
         Board board = MyFrame.boardMyFrame;
+       Spot[][] spots=game.board.getBoxes();
+
+
+
 
         for (int i = 0; i < 8; i++)
         {
             for (int j = 0; j < 8; j++)
             {
 
-                Spot spot = board.getBox(i, j);
+                Spot spot = spots[i][j];
+                Piece pieceInMain = spot.getPiece();
 
-                JLabel label = new JLabel();
+
+                JLabel label=spot.getLabelFromSpot(spot,board);
+                Piece pieceInMyFrame=pieceInMain;
+
+
+
+
                 label.setHorizontalAlignment(JLabel.CENTER);
                 label.setVerticalAlignment(JLabel.CENTER);
                 label.setOpaque(true);
 
-                spot.setLabel(label);
+                //spot.setLabel(label);
 
                 if ((i + j) % 2 == 0)
                 {
-                    label.setBackground(new Color(0x4d0000));
+                    label.setBackground(new Color(0x714141));
                 }
                 else
                 {
                     label.setBackground(new Color(0xffdacc));
                 }
 
-                Piece piece = spot.getPiece();
 
-                if (piece != null)
+
+                if (pieceInMyFrame != null)
                 {
-                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\" + getPieceImageFileName(piece);
+
+                    String imagePath = "C:\\Users\\rishi\\OneDrive\\Pictures\\chess piece\\" + getPieceImageFileName(pieceInMyFrame);
+                    //ImageIcon originalIcon = new ImageIcon(imagePath);
+                    //ImageIcon scaledIcon = scaleIconToLabel(originalIcon, label);
                     label.setIcon(new ImageIcon(imagePath));
+                }
+                else{
+                    label.setIcon(null);
                 }
 
                 label.addMouseListener(this);
@@ -344,7 +361,7 @@ public class MyFrame extends JFrame implements ActionListener, MouseListener,Coo
             }
             else if (piece instanceof Horse)
             {
-                return piece.isWhite() ? "white_horse.png" : "black_horse_.png";
+                return piece.isWhite() ? "white_horse.png" : "black_horse.png";
             }
             else if (piece instanceof Soldier)
             {

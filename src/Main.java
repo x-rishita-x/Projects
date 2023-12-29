@@ -524,14 +524,21 @@ class Game {
     private boolean makeMove(Move move, Player player) {
         Piece sourcePiece = move.getStart().getPiece();
         Spot source = move.getStart();
-        JLabel label = source.getLabel();
-        Piece labelSourcePiece = sourcePiece.getPieceFromLabel(label, board);
 
-        try{
-        if (sourcePiece == null) {
+        Piece labelSourcePiece;
+        JLabel label;
+        try {
+             label= source.getLabel();
+            labelSourcePiece = sourcePiece.getPieceFromLabel(label, board);
+        } catch (NullPointerException e) {
             return false;
-        }}
-        catch (NullPointerException e){
+        }
+
+        try {
+            if (sourcePiece == null) {
+                return false;
+            }
+        } catch (NullPointerException e) {
             throw new NullPointerException();
         }
 
@@ -676,7 +683,6 @@ public class Main extends MyFrame implements  CoordinatesCallback {
     private static void displayBoard(Game game) {
         Spot[][] spots = game.board.getBoxes();
 
-
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 Spot spot = spots[i][j];
@@ -747,7 +753,7 @@ public class Main extends MyFrame implements  CoordinatesCallback {
             mainClass.displayBoardMyFrame(game);
             displayBoard(game);
 
-            System.out.println("Player " + (game.getCurrentTurn() == player1 ? "1 (Black)" : "2 (White)") + ", enter your move:");
+            System.out.println("Player " + (game.getCurrentTurn() == player1 ? "1 (White)" : "2 (Black)") + ", enter your move:");
             System.out.println("Enter the position of the piece to move (e.g., startX startY):");
 
 
