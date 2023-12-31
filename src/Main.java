@@ -768,7 +768,7 @@ public class Main extends MyFrame implements  CoordinatesCallback {
                 //System.out.println("Start coordinates: " + startX + " " + startY);
                 mainClass.waitForMouseRelease();
 
-                Thread.sleep(1000);
+                //Thread.sleep(1000);
 
 
 
