@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio-Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amita&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amita&family=Poppins:wght@400;600&family=Rubik+Doodle+Shadow&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+        }
+
+        #backgrd-img {
+            position: absolute;
+            /* Change to absolute to position the image */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.15;
+            /* Adjust the opacity as needed */
+            z-index: -1;
+            /* Set z-index to place it behind the content */
+        }
+
+        /* Add the ::before pseudo-element to create a transparent background color layer */
+          body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            /* Adjust the rgba values for the desired color and transparency */
+            z-index: -2;
+            /* Set z-index to place it behind the image and content */
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.318);
+
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            margin: 40px
+        }
+
+        nav ul li {
+            list-style: none;
+            padding: 5px;
+            margin: 0px 23px;
+        }
+
+        nav ul li a {
+            cursor: pointer;
+            color: aliceblue;
+        }
+
+        nav ul li a:hover {
+            color: #C0C0C0;
+            font-size: 1.09rem;
+        }
+
+        .left {
+            position: relative;
+            height: 50px;
+            width: 50px;
+            border: 1px solid #717ef3;
+        }
+
+        .left #imgf {
+            width: 50px;
+            height: 50px;
+        }
+
+        section.firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 30px 0px;
+
+        }
+
+        section.firstSection div {
+            width: 30%;
+            font-size: 30px;
+            margin: 0px 0px
+        }
+
+        .firstSection .buttons {
+            display: flex;
+            position: relative;
+            margin-top: 17%;
+            height: 80px;
+            width: 350px;
+            padding: 20px;
+            left: -35%;
+        }
+
+
+        .firstSection .buttons #btn-1 {
+            position: relative;
+            width: 150px;
+            margin: 10px;
+            padding: 20px;
+            /*background-color: #7f5ebf;*/
+            background-color: black;
+            border: 1px solid #717ef3;
+            color: #929cf6;
+            ;
+        }
+
+        .firstSection .buttons #btn-1:hover {
+            background-color: #adb3ee;
+            color: black
+        }
+
+        .firstSection .buttons #btn-2:hover {
+            background-color: #717ef3;
+            color: black;
+        }
+
+
+        .firstSection .buttons #btn-2 {
+            position: relative;
+            width: 150px;
+            margin: 10px;
+            padding: 20px;
+            /*background-color: #9977c9;*/
+            background-color: black;
+            color: #929cf6;
+            border: 1px solid #717ef3;
+
+        }
+
+        .leftSection {
+            font-size: 3rem;
+            justify-content: center;
+            margin: 70px 70px;
+            padding: 20px;
+            height: 200px;
+        }
+
+        .rightSection img {
+            width: 80%;
+            margin: 70px 30px
+        }
+
+        .purple {
+            color: #E3CBBF;
+        }
+
+        #element {
+            color: #E3CBBF;
+        }
+
+        main hr {
+            border: 0;
+            background: #e3ded0;
+            height: 1.2px;
+            margin: 50px 84px;
+        }
+
+        section.secondSection {
+            margin: 0px 150px;
+            height: 80vh;
+        }
+
+
+
+
+        section.secondSection h1 {
+            justify-content: center;
+            margin: 30px;
+
+        }
+
+        section.secondSection span {
+            color: gray;
+            margin: 30px;
+
+        }
+
+        .box {
+            display: flex;
+            height: 550px;
+            width: 80vw;
+            /*margin: 50px 0px;*/
+
+        }
+
+        .secondSection .verticle {
+            height: 93px;
+            width: 100px;
+            /* Increase the width for better visibility */
+            background-color: white;
+            margin: 0px 120px;
+            border: 2px solid rgb(10, 125, 129);
+            /* Adjust the border width */
+        }
+
+
+        .image-top {
+            width: 70px;
+            position: relative;
+            top: -32px;
+            /*margin: 30px 0px;*/
+        }
+
+        .verticle-title a {
+            position: relative;
+            color: #ea22a0;
+        }
+
+        .verticle-title a:hover {
+            position: relative;
+            color: #ecbddb;
+            font-size: 18px;
+        }
+
+        .verticle-title {
+            position: relative;
+            color: #ea22a0;
+        }
+
+        .verticle-desc {
+            font-size: 10px;
+            padding: 15px;
+        }
+
+        #v-2 {
+            /*top: 70px;*/
+
+            margin: 0px 10px;
+            height: 500px;
+            width: 50%;
+            border: 2px solid rgb(10, 125, 129);
+        }
+
+        #v-1 {
+            top: 0px;
+
+            margin: 0px 10px;
+            height: 500px;
+            width: 50%;
+            border: 2px solid rgb(10, 125, 129);
+        }
+
+        hr #second {
+            margin: 100px 50px;
+        }
+
+        .thirdSection {
+            margin: 100px 100px;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .thirdSection .left-side {
+            width: 30%;
+            height: 10cm;
+        }
+
+        .thirdSection .left-side h2 {
+            color: #AF7AD5;
+            padding: 10px;
+            height: 50px;
+            width: 100px;
+            font-family: 'Poppins', 'Rubik', 'Doodle', 'Shadow';
+        }
+
+        .thirdSection .left-side #f {
+            margin: 10px;
+        }
+
+        .thirdSection .left-side #s a {
+            margin: 10px;
+            color: aqua;
+        }
+
+
+        .thirdSection .right-side {
+
+            width: 20%;
+            height: 20%;
+            border: 1px solid #929cf6;
+
+        }
+
+        .thirdSection .right-side #imgg {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .footer-class {
+            display: flex;
+            padding: 23px 123px;
+            justify-content: space-around;
+            position: relative;
+            background-color: #1b1a1a;
+            height: 10cm;
+
+        }
+
+        .footer-class .leftSection {
+            display: flex;
+            top: 10px;
+            width: 35%;
+            height: 6cm;
+            background-color: #1b1a1a;
+        }
+
+
+        .footer-class .leftSection .leftSection-class {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            justify-content: space-evenly;
+            border: 4px solid #717ef3;
+            border-style: solid;
+            height: 30%;
+            width: 9cm;
+
+        }
+
+
+        .footer-class .leftSection #github-logo {
+            width: 100px;
+            height: 100px;
+            margin-top: -15%;
+            margin-left: -10%;
+
+
+        }
+
+        .footer-class .leftSection #gmail-logo {
+            width: 80px;
+            height: 60px;
+            margin-top: 8%;
+            margin-left: -40%;
+        }
+
+        .footer-class .leftSection #linkedIn-logo {
+            width: 50px;
+            height: 50px;
+            margin-top: 20%;
+            margin-left: -60%;
+        }
+
+        .footer-class .leftSection #instagram-logo {
+            width: 50px;
+            height: 50px;
+            margin-top: 20%;
+            margin-left: -30%;
+
+        }
+
+
+
+
+
+        .footer-class .rightSection {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            right: 13%;
+            top: -5%;
+            width: 20%;
+            height: 80%;
+            background-color: #1b1a1a;
+            padding: 10px;
+        }
+
+        .footer-class .rightSection h4 {
+            margin: 20px;
+            font-size: 25px;
+            color: #eedede;
+
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #eedede;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            color: black;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background-color: cyan;
+            color: #000000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 50%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+
+        #text-center {
+            text-align: center;
+            padding: 30px;
+            color: gray;
+            background-color: #1b1a1a;
+
+        }
+    </style>
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+            <div class="left"><a href="\"><img src="pics/1141.jpg" alt="" id="imgf"></a>
+            </div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/">About</a></li>
+                    <li><a href="/">Services</a></li>
+                    <li><a href="/">Projects</a></li>
+                    <li><a href="/">Skills</a></li>
+                    <li><a href="/">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <img src="pics/J4o.gif" id="backgrd-img">
+            <div class="leftSection">
+                Hi, My name is <span class="purple"> Rishita Sharma</span>
+                and I am a <span class="purple">Student and</span> <span id="element"></span>
+            </div>
+            <div class="buttons">
+                <button class="btn" id="btn-1" type="button">Resume</button>
+                <button class="btn" id="btn-2" type="button">Github</button>
+            </div>
+            <div class="rightSection">
+                <img src="pics/student_picture.png" alt="image of a student">
+            </div>
+        </section>
+        <hr>
+        <section class="secondSection">
+            <span>What I have done so far</span>
+            <h1>Projects</h1>
+            <div class="box">
+                <div class="vertical" id="v-1">
+                    <img class="image-top" src="pics/image.png" alt="">
+                    <div class="verticle-title"><a href="https://github.com/x-rishita-x/Projects/tree/master/src">
+                            Chess Game
+                        </a>
+                    </div>
+                    <div class="verticle-desc">
+                        I crafted an exhilarating chess experience entirely from the ground up. Employing Java, I
+                        meticulously designed the game's logic, implemented move validation, and structured various
+                        classes to enhance functionality. To captivate players visually, I harnessed the power of Java
+                        Swing, ensuring an engaging and seamless user interface for an immersive gaming journey.
+                    </div>
+
+                </div>
+                <div class="vertical" id="v-2">
+                    <img class="image-top" src="pics/image.png" alt="">
+                    <div class="verticle-title"><a
+                            href="https://github.com/x-rishita-x/new-repo/tree/master/currency_convertor_app">
+                            Currency convertor
+                        </a>
+                    </div>
+                    <div class="verticle-desc">This HTML code crafts a sleek currency converter webpage, boasting a
+                        stylish navigation bar, an intuitive form for currency conversion, and a dynamic section
+                        showcasing real-time converted currency values. The page is bedecked with CSS finesse, ensuring
+                        a visually appealing and responsive design. The conversion magic is orchestrated by a JavaScript
+                        script, seamlessly fetching live currency exchange rates from CurrencyAPI and rendering the
+                        results in an elegant table.
+                    </div>
+
+                </div>
+                <div class="vertical" id="v-1">
+                    <img class="image-top" src="pics/image.png" alt="">
+                    <div class="verticle-title"><a
+                            href="https://github.com/x-rishita-x/new-repo/blob/master/miniProjectPP.cpp">
+                            Mathetmatical tool
+                        </a>
+                    </div>
+                    <div class="verticle-desc">This C++ code is a versatile mathematical tool that performs various
+                        operations:
+                        <ul>
+                            <li>Solving Linear Equations in Two Variables</li>
+                            <li>Solving Linear Equations in Three Variables</li>
+                            <li>Finding Eigenvalues and Eigenvectors of a 2x2 Matrix:</li>
+                            <li>Finding Determinant of a 2x2 Matrix</li>
+                            <li>Finding Determinant of a 3x3 Matrix</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="vertical" id="v-2">
+                    <img class="image-top" src="pics/image.png" alt="">
+                    <div class="verticle-title">
+                        Portfolio-Website
+                    </div>
+                    <div class="verticle-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Cum repellat perferendis similique id tempora optio a,
+                        tenetur odit veniam ducimus reiciendis perspiciatis excepturi esse
+                        dolore provident quasi magnam? Voluptatem, voluptatibus.
+                    </div>
+                </div>
+                <div class="vertical" id="v-1">
+                    <img class="image-top" src="pics/image.png" alt="">
+                    <div class="verticle-title">
+                        HTML devoloper(2010-2012)
+                    </div>
+                    <div class="verticle-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Cum repellat perferendis similique id tempora optio a,
+                        tenetur odit veniam ducimus reiciendis perspiciatis excepturi esse
+                        dolore provident quasi magnam? Voluptatem, voluptatibus.
+                    </div>
+                </div>
+                <div class="vertical" id="v-2">
+                    <img class="image-top" src="pics/image.png" alt="">
+                    <div class="verticle-title">
+                        HTML devoloper(2010-2012)
+                    </div>
+                    <div class="verticle-desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                        Cum repellat perferendis similique id tempora optio a,
+                        tenetur odit veniam ducimus reiciendis perspiciatis excepturi esse
+                        dolore provident quasi magnam? Voluptatem, voluptatibus.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr id="second">
+        <section class="thirdSection">
+            <div class="left-side">
+                <h2>About</h2>
+                <div id="f">Currently pursuing B.Tech in Computer Science from Shri G.S.
+                    Institute of Technology and Science, graduating in 2026.
+                    Enthusiastic and passionate coder with an interest in exploring the Web Development field and
+                    improving my problem-solving skills.</div>
+
+                <div id="s"><a href="https://mail.google.com/mail/u/0/#inbox">Email: rishita2004sharma@gmail.com</a>
+                </div>
+
+            </div>
+            <div class="right-side"> <img src="pics/1141.jpg" alt="" id="imgg"></div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-class">
+            <div class="leftSection">
+                <div class="leftSection-class">
+                    <div><a href="https://github.com/x-rishita-x/" id="github"> <img src="pics/github-logo.png"
+                                id="github-logo"></a></div>
+                    <div><a href="https://mail.google.com/mail/u/0/#inbox" id="email"> <img src="pics/gmail-logo.png"
+                                id="gmail-logo"></a></div>
+                    <div><a href="https://www.linkedin.com/in/rishita-sharma-842400215/i" id="linkedIn"> <img
+                                src="pics/linkedIn-logo.png" id="linkedIn-logo"></a></div>
+                    <div><a href="https://www.instagram.com/rishita__04/" id="instagram"> <img
+                                src="pics/Instagram_icon.png" id="instagram-logo"></a></div>
+                </div>
+            </div>
+            <div class="rightSection">
+                <h4>Contact Form</h4>
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+
+                    <button id=" submit-btn" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+        <div id="text-center"> Copyright &#169;www.rishitasharma.com | All rights reserved</div>
+
+    </footer>
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Video Editor', 'Grapgic Designer', 'Web Designer', 'Web Devoloper'],
+            typeSpeed: 80,
+        });
+    </script>
+    <script src="demo.js" defer></script>
+
+</body>
+
+</html>
